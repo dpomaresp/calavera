@@ -5,8 +5,8 @@
  */
 
 /*!
- * Generated using the Bootstrap Customizer (http://getbootstrap.com/customize/?id=e5697284b6f6282de8c4)
- * Config saved to config.json and https://gist.github.com/e5697284b6f6282de8c4
+ * Generated using the Bootstrap Customizer (http://getbootstrap.com/customize/?id=9497b83e072f3d9d1473)
+ * Config saved to config.json and https://gist.github.com/9497b83e072f3d9d1473
  */
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
@@ -1077,7 +1077,7 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
-  color: #333333;
+  color: #000000;
   background-color: #ffffff;
 }
 input,
@@ -2876,7 +2876,7 @@ select[multiple].form-group-lg .form-control {
   display: block;
   margin-top: 5px;
   margin-bottom: 10px;
-  color: #737373;
+  color: #404040;
 }
 @media (min-width: 768px) {
   .form-inline .form-group {
@@ -4421,7 +4421,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   background-color: #70a107;
 }
 .navbar-default .navbar-toggle .icon-bar {
-  background-color: #888888;
+  background-color: #000000;
 }
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
@@ -4900,7 +4900,7 @@ a.thumbnail.active {
 }
 .thumbnail .caption {
   padding: 9px;
-  color: #333333;
+  color: #000000;
 }
 .alert {
   padding: 15px;

@@ -22,9 +22,12 @@ body {
 -------------------------------------------------- */
 /* Not required for template or sticky footer method. */
 
+
 body > .container {
   padding: 60px 15px 0;
+  
 }
+
 .container .text-muted {
   margin: 20px 0;
 }
@@ -42,4 +45,8 @@ code {
 /* Remove border bottom navbar Bootstrap */
 .navbar{
   border: 0;
+}
+
+.footer-text{
+  margin: 15px 0 15px 0;  
 }

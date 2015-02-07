@@ -12,7 +12,7 @@
     "@brand-warning": "#f0ad4e",
     "@brand-danger": "#d9534f",
     "@body-bg": "#fff",
-    "@text-color": "@gray-dark",
+    "@text-color": "black",
     "@link-color": "@brand-primary",
     "@link-hover-color": "darken(@link-color, 15%)",
     "@link-hover-decoration": "underline",
@@ -156,7 +156,7 @@
     "@navbar-default-brand-hover-color": "darken(@navbar-default-brand-color, 10%)",
     "@navbar-default-brand-hover-bg": "transparent",
     "@navbar-default-toggle-hover-bg": "#70A107",
-    "@navbar-default-toggle-icon-bar-bg": "#888",
+    "@navbar-default-toggle-icon-bar-bg": "black",
     "@navbar-default-toggle-border-color": "#70A107",
     "@navbar-inverse-color": "lighten(@gray-light, 15%)",
     "@navbar-inverse-bg": "#222",
@@ -425,5 +425,5 @@
     "scrollspy.js",
     "transition.js"
   ],
-  "customizerUrl": "http://getbootstrap.com/customize/?id=e5697284b6f6282de8c4"
+  "customizerUrl": "http://getbootstrap.com/customize/?id=9497b83e072f3d9d1473"
 }

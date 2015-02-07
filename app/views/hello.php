@@ -6,7 +6,7 @@
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 	<link rel="stylesheet" href="../css/bootstrap.min.css">
 	<link href="../css/sticky-footer-navbar.css" rel="stylesheet">
-	<title>Calavera Productions</title>
+	<title>Calavera Beats</title>
 </head>
 <body cz-shortcut-listen="true">
 
@@ -20,7 +20,8 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Calavera Productions</a>
+            <a class="navbar-brand" href="#">Calavera Beats</a>
+            <!-- <a href="#"><img class="calavera-title" src="../images/calavera-title.png" /></a> -->
         </div>
         <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
           <ul class="nav navbar-nav">
@@ -55,7 +56,7 @@
 
     <footer class="footer">
       <div class="container">
-        <p class="text-muted">Place sticky footer content here.</p>
+          <p class="footer-text">Copyright &copy; 2015 Calavera Beats</p>
       </div>
     </footer>
 
