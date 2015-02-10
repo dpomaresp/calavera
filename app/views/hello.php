@@ -13,35 +13,42 @@
     <!-- Fixed navbar -->
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-            <a class="navbar-brand" href="#">Calavera Beats</a>
-            <!-- <a href="#"><img class="calavera-title" src="../images/calavera-title.png" /></a> -->
+        <div class="row-fluid">
+
+        
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+              <a class="navbar-brand" href="#">Calavera Beats</a>
+              <!-- <a href="#"><img class="calavera-title" src="../images/calavera-title.png" /></a> -->
+          </div>
+          <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#beats">Beats</a></li>
+              <li><a href="#contact">Contacto</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li class="dropdown-header">Nav header</li>
+                  <li><a href="#">Separated link</a></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li>
+            </ul>
+            <a href="/language.php?lang=es/"><img class="flag-image" src="../images/flags/es.png" /></a>
+            <a href="/language.php?lang=en/"><img class="flag-image" src="../images/flags/uk.png" /></a>
+          </div><!--/.nav-collapse -->
+        
         </div>
-        <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div><!--/.nav-collapse -->
       </div>
     </nav>
 
@@ -54,12 +61,56 @@
       <p>Back to <a href="../sticky-footer">the default sticky footer</a> minus the navbar.</p>
     </div>
 
+    <!-- Modal subscribe form -->
+    <div id="subscribe-modal" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Formulario de subscripción</h4>
+          </div>
+          <div class="modal-body">
+            <form role="form">
+              <div class="form-group">
+                <label for="name">Nombre</label>
+                <input type="text" class="form-control" id="name">
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" class="form-control" id="email">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">Enviar</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <footer class="footer">
       <div class="container">
-          <p class="footer-text">Copyright &copy; 2015 Calavera Beats</p>
+        <div class="row">
+          <div class="col-md-4 col-xs-4">
+            <button id="subscribe-btn" type="button" class="btn btn-default" data-toggle="modal" data-target="#subscribe-modal">
+              <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Subscríbete
+            </button>
+          </div>
+          <div class="col-md-4 col-xs-4">
+            <div class="social">
+              <a class="facebook" href="http://www.facebook.com/calaverabeats" target="_blank"><img src="../images/Icons 32/facebook.png"/></a>
+              <a class="twitter" href="http://www.twitter.com/calaverabeats" target="_blank"><img src="../images/Icons 32/twitter.png"/></a>
+              <a class="youtube" href="http://www.youtube.com/calaverabeats" target="_blank"><img src="../images/Icons 32/youtube.png"/></a>
+              <a class="soundcloud" href="http://www.soundcloud.com/calaverabeats" target="_blank"><img src="../images/Icons 32/soundcloud.png"/></a>
+            </div>
+          </div>
+          <div class="col-md-4 col-xs-4">
+            <p class="footer-text">Copyright &copy; 2015</p>
+          </div>
+        </div>
       </div>
     </footer>
-
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

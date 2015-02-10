@@ -13,8 +13,10 @@ body {
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
-  height: 60px;
+  height: 40px;
   background-color: #70A107;
+  /* cambiar a redondear solo esquinas superiores border: 2px solid;*/
+  /*border-radius: 10px 10px 0 0;*/
 }
 
 
@@ -45,8 +47,47 @@ code {
 /* Remove border bottom navbar Bootstrap */
 .navbar{
   border: 0;
+  /*border-radius: 0 0 15px 15px;*/
 }
 
 .footer-text{
-  margin: 15px 0 15px 0;  
+  margin: 10px 0 10px 0;  
+}
+
+a .flag-image {
+  float: right;
+  margin: 15px 5px 15px 2px;
+}
+
+#subscribe-btn{
+  float: left;
+  margin: 3px;
+}
+
+.social{
+  margin: 3px;
+  text-align: center;
+}
+
+.social img{
+  background-color: white;
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  margin: 2px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.social img:hover{
+  opacity: 0.7;
+}
+
+/* Modal style*/
+.modal-header{
+  background-color: #70A107;
+}
+
+.modal-footer{
+  background-color: #eee;
 }
