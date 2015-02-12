@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 	<link rel="stylesheet" href="../css/bootstrap.min.css">
 	<link href="../css/sticky-footer-navbar.css" rel="stylesheet">
@@ -13,9 +13,7 @@
     <!-- Fixed navbar -->
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
-        <div class="row-fluid">
-
-        
+        <div class="row-fluid">        
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
               <span class="sr-only">Toggle navigation</span>
@@ -23,8 +21,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-              <a class="navbar-brand" href="#">Calavera Beats</a>
-              <!-- <a href="#"><img class="calavera-title" src="../images/calavera-title.png" /></a> -->
+            <a class="navbar-brand" href="#"><img src="../images/calavera-title.png" /></a>
           </div>
           <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
             <ul class="nav navbar-nav">
@@ -45,7 +42,7 @@
               </li>
             </ul>
             <a href="/language.php?lang=es/"><img class="flag-image" src="../images/flags/es.png" /></a>
-            <a href="/language.php?lang=en/"><img class="flag-image" src="../images/flags/uk.png" /></a>
+            <a href="/language.php?lang=en/"><img class="flag-image" src="../images/flags/us.png" /></a>
           </div><!--/.nav-collapse -->
         
         </div>
@@ -71,6 +68,7 @@
           </div>
           <div class="modal-body">
             <form role="form">
+              <p> Si deseas recibir información por correo electrónico de los últimos beats o cualquiera otra novedad, puedes inscribirte aquí </p>
               <div class="form-group">
                 <label for="name">Nombre</label>
                 <input type="text" class="form-control" id="name">
@@ -92,20 +90,21 @@
     <footer class="footer">
       <div class="container">
         <div class="row">
-          <div class="col-md-4 col-xs-4">
+          <div class="col-xl-4 col-md-4 col-xs-6">
             <button id="subscribe-btn" type="button" class="btn btn-default" data-toggle="modal" data-target="#subscribe-modal">
               <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Subscríbete
             </button>
           </div>
-          <div class="col-md-4 col-xs-4">
+          <div class="col-xl-4 col-md-4 col-xs-6">
             <div class="social">
-              <a class="facebook" href="http://www.facebook.com/calaverabeats" target="_blank"><img src="../images/Icons 32/facebook.png"/></a>
-              <a class="twitter" href="http://www.twitter.com/calaverabeats" target="_blank"><img src="../images/Icons 32/twitter.png"/></a>
-              <a class="youtube" href="http://www.youtube.com/calaverabeats" target="_blank"><img src="../images/Icons 32/youtube.png"/></a>
-              <a class="soundcloud" href="http://www.soundcloud.com/calaverabeats" target="_blank"><img src="../images/Icons 32/soundcloud.png"/></a>
+              <a class="facebook" href="http://www.facebook.com/calaverabeats" target="_blank"><img title="Facebook" src="../images/Icons 32/facebook.png"/></a>
+              <a class="twitter" href="http://www.twitter.com/calaverabeats" target="_blank"><img title="Twitter" src="../images/Icons 32/twitter.png"/></a>
+              <a class="youtube" href="http://www.youtube.com/calaverabeats" target="_blank"><img title="YouTube" src="../images/Icons 32/youtube-2.png"/></a>
+              <a class="soundcloud" href="http://www.soundcloud.com/calavera-beats" target="_blank"><img title="SoundCloud" src="../images/Icons 32/soundcloud.png"/></a>
+              <a class="envato" href="http://www.audiojungle.net/user/calaverabeats" target="_blank"><img title="Envato" src="../images/Icons 32/envato.png"/></a>
             </div>
           </div>
-          <div class="col-md-4 col-xs-4">
+          <div class="col-xl-4 col-md-4 col-xs-12">
             <p class="footer-text">Copyright &copy; 2015</p>
           </div>
         </div>

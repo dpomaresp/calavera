@@ -4,19 +4,19 @@ html {
   position: relative;
   min-height: 100%;
 }
+
 body {
   /* Margin bottom by footer height */
-  margin-bottom: 60px;
+  margin-bottom: 82px;
 }
+
 .footer {
   position: absolute;
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
-  height: 40px;
+  height: auto;
   background-color: #70A107;
-  /* cambiar a redondear solo esquinas superiores border: 2px solid;*/
-  /*border-radius: 10px 10px 0 0;*/
 }
 
 
@@ -30,6 +30,11 @@ body > .container {
   
 }
 
+.navbar-toggle{
+  float: left;
+  margin-right: 5px;
+}
+
 .container .text-muted {
   margin: 20px 0;
 }
@@ -37,7 +42,6 @@ body > .container {
 .footer > .container {
   padding-right: 15px;
   padding-left: 15px;
-  text-align: right;
 }
 
 code {
@@ -47,11 +51,28 @@ code {
 /* Remove border bottom navbar Bootstrap */
 .navbar{
   border: 0;
-  /*border-radius: 0 0 15px 15px;*/
+}
+
+.navbar-brand{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 5px;
+  padding-left: 5px;
+  float: left;
+}
+
+.navbar-nav>li.active{
+  font-weight: bold;
+}
+
+.navbar-brand img{
+  height: 40px;
+  width: auto;
 }
 
 .footer-text{
-  margin: 10px 0 10px 0;  
+  margin: 10px;
+  float: right;
 }
 
 a .flag-image {
@@ -61,12 +82,12 @@ a .flag-image {
 
 #subscribe-btn{
   float: left;
-  margin: 3px;
+  margin: 4px;
 }
 
 .social{
   margin: 3px;
-  text-align: center;
+  float:right;
 }
 
 .social img{
@@ -90,4 +111,8 @@ a .flag-image {
 
 .modal-footer{
   background-color: #eee;
+}
+
+ul.dropdown-menu > li > a {
+  border-bottom: 0;
 }
