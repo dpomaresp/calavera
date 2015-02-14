@@ -5,10 +5,24 @@ html {
   min-height: 100%;
 }
 
-body {
-  /* Margin bottom by footer height */
-  margin-bottom: 82px;
+@media only screen and (min-width: 300px) {
+ body {
+    margin-bottom: 118px;
+  }  
 }
+
+@media only screen and (min-width: 481px) {
+ body {
+    margin-bottom: 82px;
+  }  
+}
+
+@media only screen and (min-width: 992px) {
+  body {
+    margin-bottom: 42px;
+  }  
+}
+
 
 .footer {
   position: absolute;
