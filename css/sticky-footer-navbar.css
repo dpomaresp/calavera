@@ -130,3 +130,13 @@ a .flag-image {
 ul.dropdown-menu > li > a {
   border-bottom: 0;
 }
+
+
+/* Language flags MENU */
+a.lang-selected{
+  pointer-events: none; 
+}
+
+a.lang-selected > img {
+    opacity:0.3;  
+}
