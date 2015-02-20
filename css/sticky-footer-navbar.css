@@ -140,3 +140,8 @@ a.lang-selected{
 a.lang-selected > img {
     opacity:0.3;  
 }
+
+/*.navbar-default .navbar-nav>li>a:hover{
+  background-color: #70A107;
+  color: white;
+}*/
