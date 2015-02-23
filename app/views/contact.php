@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="../css/bootstrap.min.css">
 	<link href="../css/sticky-footer-navbar.css" rel="stylesheet">
   <link href="../js/jplayer-dist/skin/blue.monday/css/jplayer.blue.monday.min.css" rel="stylesheet" type="text/css" />
-	<title>Calavera Beats - Home</title>
+	<title>Calavera Beats - Contacto</title>
 </head>
 <body cz-shortcut-listen="true">
 
@@ -26,9 +26,9 @@
           </div>
           <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
             <ul class="nav navbar-nav">
-              <li class="active"><a disabled>Home</a></li>
+              <li><a href="<?php echo URL::to('/'); ?>">Home</a></li>
               <li><a href="<?php echo URL::to('/beats'); ?>">Beats</a></li>
-              <li> <a href="<?php echo URL::to('/contact'); ?>">Contacto</a> </li>
+              <li class="active"><a disabled>Contacto</a></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
@@ -53,8 +53,33 @@
     <!-- Begin page content -->
     <div class="container">
       <div class="page-header">
-        <h1>Sticky footer with fixed navbar</h1>
+        <h1>Información de contacto</h1>
       </div>
+        <div class="row">
+          <div class="col-md-6 col-xs-12">
+            <form>
+              <div class="form-group">
+                <label for="contact_name">Nombre</label>
+                <input type="text" class="form-control input-md" id="contact_name">
+              </div>
+              <div class="form-group">
+                <label for="contact_email">E-mail</label>
+                <input type="email" class="form-control" id="contact_email">
+              </div>
+              <div class="form-group">
+                <label for="contact_comment">Comentario</label>
+                <textarea type="text" rows="4" class="form-control" id="contact_comment" ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Enviar</button>
+            </div>
+            <div class="col-md-6 col-xs-12">
+              <div id="map-canvas" style="height:250px;width:auto;margin: 15px 0 15px 0;"></div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      
     </div>
 
     <!-- Modal subscribe form -->
@@ -79,8 +104,8 @@
             </form>
           </div>
           <div class="modal-footer">
-            <button type="submit" class="btn btn-primary">Enviar</button>
-            <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            <button type="submit" class="btn btn-primary pull-left">Enviar</button>
+            <button type="button" class="btn btn-default  pull-left" data-dismiss="modal">Cerrar</button>
           </div>
         </div>
       </div>
@@ -115,11 +140,9 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../js/jplayer-dist/jplayer/jquery.jplayer.min.js"></script>
-    <script type="text/javascript" src="../js/jplayer-dist/add-on/jplayer.playlist.min.js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
     <script>
       $(document).ready(function(){
-
         // Flag behaviour on click simulation
         $('.lang-flag').on('click', function(e){
           e.preventDefault();
@@ -127,65 +150,19 @@
           $(this).addClass('lang-selected');
         });
 
+        var map;
 
-        // jplayer code
-        var myPlaylist = new jPlayerPlaylist({
-          jPlayer: "#jquery_jplayer_N",
-          cssSelectorAncestor: "#jp_container_N"
-        }, [
-          // {
-          //   title:"Your Face",
-          //   artist:"The Stark Palace",
-          //   mp3:"http://www.jplayer.org/audio/mp3/TSP-05-Your_face.mp3",
-          //   oga:"http://www.jplayer.org/audio/ogg/TSP-05-Your_face.ogg",
-          //   poster: "../images/Calavera Beats Final.jpg"
-          // }
-        ], {
-          playlistOptions: {
-            enableRemoveControls: true,
-            autoPlay: false
-          },
-          swfPath: "../../js/jplayer-dist/jplayer",
-          supplied: "webmv, ogv, m4v, oga, mp3",
-          useStateClassSkin: true,
-          autoBlur: false,
-          smoothPlayBar: true,
-          keyEnabled: true
-        });
+        function initialize() {
+          var mapOptions = {
+            zoom: 8,
+            center: new google.maps.LatLng(38.0550714, -0.9389042),
+          };
+          
+          map = new google.maps.Map(document.getElementById('map-canvas'),
+              mapOptions);
+        }
 
-        
-        
-          myPlaylist.setPlaylist([
-          {
-            title:"Your Face",
-            artist:"The Stark Palace",
-            mp3:"http://www.jplayer.org/audio/mp3/TSP-05-Your_face.mp3",
-            poster: "../images/Calavera Beats Final.jpg"
-          },
-          {
-            title:"Hidden",
-            artist:"Miaow",
-            mp3:"http://www.jplayer.org/audio/mp3/Miaow-02-Hidden.mp3",
-            poster: "http://www.jplayer.org/audio/poster/Miaow_640x360.png"
-          },
-          {
-            title:"Cyber Sonnet",
-            artist:"The Stark Palace",
-            mp3:"http://www.jplayer.org/audio/mp3/TSP-07-Cybersonnet.mp3",
-            poster: "http://www.jplayer.org/audio/poster/The_Stark_Palace_640x360.png"
-          },
-          {
-            title:"Tempered Song",
-            artist:"Miaow",
-            mp3:"http://www.jplayer.org/audio/mp3/Miaow-01-Tempered-song.mp3",
-            poster: "http://www.jplayer.org/audio/poster/Miaow_640x360.png"
-          },
-          {
-            title:"Lentement",
-            artist:"Miaow",
-            mp3:"http://www.jplayer.org/audio/mp3/Miaow-03-Lentement.mp3",
-            poster: "http://www.jplayer.org/audio/poster/Miaow_640x360.png"
-          }]);
+        google.maps.event.addDomListener(window, 'load', initialize);
       });
     
     </script>

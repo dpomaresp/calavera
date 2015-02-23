@@ -15,3 +15,14 @@ Route::get('/', function()
 {
 	return View::make('home');
 });
+
+
+Route::get('contact', function()
+{
+	return View::make('contact');
+});
+
+Route::get('beats', function()
+{
+	return View::make('beats');
+});

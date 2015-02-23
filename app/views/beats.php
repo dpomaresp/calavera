@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="../css/bootstrap.min.css">
 	<link href="../css/sticky-footer-navbar.css" rel="stylesheet">
   <link href="../js/jplayer-dist/skin/blue.monday/css/jplayer.blue.monday.min.css" rel="stylesheet" type="text/css" />
-	<title>Calavera Beats - Home</title>
+	<title>Calavera Beats - Beats</title>
 </head>
 <body cz-shortcut-listen="true">
 
@@ -26,8 +26,8 @@
           </div>
           <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
             <ul class="nav navbar-nav">
-              <li class="active"><a disabled>Home</a></li>
-              <li><a href="<?php echo URL::to('/beats'); ?>">Beats</a></li>
+              <li><a href="<?php echo URL::to('/'); ?>">Home</a></li>
+              <li class="active"><a disabled>Beats</a></li>
               <li> <a href="<?php echo URL::to('/contact'); ?>">Contacto</a> </li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
@@ -53,7 +53,71 @@
     <!-- Begin page content -->
     <div class="container">
       <div class="page-header">
-        <h1>Sticky footer with fixed navbar</h1>
+        <h1>Lista de beats</h1>
+      </div>
+      
+      <div id="player" style="margin: 15px; ">
+        <div id="jp_container_N" class="jp-video jp-video-270p" style="width: 320px;" role="application" aria-label="media player">
+          <div class="jp-type-playlist">
+            <div id="jquery_jplayer_N" class="jp-jplayer" style="display:none"></div>
+            <div class="jp-gui">
+              <!-- <div class="jp-video-play">
+                <button class="jp-video-play-icon" role="button" tabindex="0">play</button>
+              </div> -->
+              <div class="jp-interface">
+                <div class="jp-progress">
+                  <div class="jp-seek-bar">
+                    <div class="jp-play-bar"></div> 
+                  </div>
+                </div>
+                <div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>
+                <div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>
+                <div class="jp-controls-holder">
+                  <div class="jp-controls">
+                    <button class="jp-previous" role="button" tabindex="0" title="Anterior">Anterior</button>
+                    <button class="jp-play" role="button" tabindex="0" title="Play">Play</button> 
+                    <button class="jp-next" role="button" tabindex="0" title="Siguiente">Siguiente</button>
+                    <button class="jp-stop" role="button" tabindex="0" title="Stop">Stop</button>
+                  </div>
+                  <div class="jp-volume-controls">
+                    <button class="jp-mute" role="button" tabindex="0" title="Silenciar">Silenciar</button>
+                    <button class="jp-volume-max" role="button" tabindex="0" title="Max volumen">Max volumen</button>
+                    <div class="jp-volume-bar">
+                      <div class="jp-volume-bar-value"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="jp-details">
+                  <div class="jp-title" aria-label="title">&nbsp;</div>
+                </div>
+              </div>
+            </div>
+            <div class="jp-playlist">
+              <ul>
+                <li>&nbsp;</li>
+              </ul>
+            </div>
+            <div class="jp-no-solution">
+              <span>Update Required</span>
+              To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin: 15px; ">
+        <div style="width:300px; height:450px; overflow:hidden;">
+          <center>
+              <div>
+                <embed src="http://www.soundclick.com/widgets/creatives/mp3PlayerPremium.swf" width="300" height="430" flashvars="bandid=996361&ext=1" name="MP3PlayerPremium" type="application/x-shockwave-flash" wmode="transparent" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+              </div>
+              <div style="width: 300px; position: relative; top: -390px;">
+                <a href="http://www.soundclick.com/bands/default.cfm?bandID=996361">
+                  <img src="http://www.soundclick.com/images/navigation/blank1x1.gif" border="0" width="300" height="250">
+                </a> 
+              </div>
+          </center>
+        </div>
       </div>
     </div>
 

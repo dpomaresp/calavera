@@ -11,13 +11,13 @@ class HomeController extends BaseController {
 	| based routes. That's great! Here is an example controller method to
 	| get you started. To route to this controller, just add the route:
 	|
-	|	Route::get('/', 'HomeController@showHomePage');
+	|	Route::get('/', 'HomeController@showHome');
 	|
 	*/
 
-	public function showHomePage()
+	public function showContactPage()
 	{
-		return View::make('home');
+		return View::make('contact');
 	}
 
 }
