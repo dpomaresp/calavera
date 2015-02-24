@@ -1,3 +1,101 @@
+<?php $__env->startSection('pageTitle'); ?>
+  <title>Calavera Beats - Contacto</title>
+<?php $__env->stopSection(); ?> 
+
+
+<?php $__env->startSection('navbarElements'); ?>
+  <li><a href="<?php echo URL::to('/');; ?>">Home</a></li>
+  <li><a href="<?php echo URL::to('/beats');; ?>">Beats</a></li>
+  <li class="active"> <a disabled>Contacto</a> </li>
+  <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another action</a></li>
+    <li><a href="#">Something else here</a></li>
+    <li class="divider"></li>
+    <li class="dropdown-header">Nav header</li>
+    <li><a href="#">Separated link</a></li>
+    <li><a href="#">One more separated link</a></li>
+  </ul>
+  </li>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('content'); ?>
+  <div class="container">
+    <div class="page-header">
+      <h1>Información de contacto</h1>
+    </div>
+      <div class="row">
+        <div class="col-md-6 col-xs-12">
+          <form>
+            <div class="form-group">
+              <label for="contact_name">Nombre</label>
+              <input type="text" class="form-control input-md" id="contact_name">
+            </div>
+            <div class="form-group">
+              <label for="contact_email">E-mail</label>
+              <input type="email" class="form-control" id="contact_email">
+            </div>
+            <div class="form-group">
+              <label for="contact_comment">Comentario</label>
+              <textarea type="text" rows="4" class="form-control" id="contact_comment" ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </div>
+          <div class="col-md-6 col-xs-12">
+            <div id="map-canvas" style="height:250px;width:auto;margin: 15px 0 15px 0;"></div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    
+  </div>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('jsLibraries'); ?>
+  @parent
+  <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<?php $__env->stopSection(); ?>
+
+
+<?php $__env->startSection('jsCode'); ?>
+  @parent
+  <script>
+    $(document).ready(function(){
+      var map;
+
+      function initialize() {
+        var myLatlng = new google.maps.LatLng(38.0550714,-0.9389042);
+        var mapOptions = {
+          zoom: 8,
+          center: myLatlng,
+          mapTypeId: google.maps.MapTypeId.ROADMAP,
+          mapTypeControl: false,
+          streetViewControl: false
+        };
+        
+        map = new google.maps.Map(document.getElementById('map-canvas'),
+            mapOptions);
+
+        var marker = new google.maps.Marker({
+          position: myLatlng,
+          map: map
+          // ,title: 'Hello World!'
+        });
+      }
+
+      google.maps.event.addDomListener(window, 'load', initialize);
+    });
+  </script>
+<?php $__env->stopSection(); ?>
+      
+</body>
+</html>
+
+
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -51,36 +149,7 @@
     </nav>
 
     <!-- Begin page content -->
-    <div class="container">
-      <div class="page-header">
-        <h1>Información de contacto</h1>
-      </div>
-        <div class="row">
-          <div class="col-md-6 col-xs-12">
-            <form>
-              <div class="form-group">
-                <label for="contact_name">Nombre</label>
-                <input type="text" class="form-control input-md" id="contact_name">
-              </div>
-              <div class="form-group">
-                <label for="contact_email">E-mail</label>
-                <input type="email" class="form-control" id="contact_email">
-              </div>
-              <div class="form-group">
-                <label for="contact_comment">Comentario</label>
-                <textarea type="text" rows="4" class="form-control" id="contact_comment" ></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary">Enviar</button>
-            </div>
-            <div class="col-md-6 col-xs-12">
-              <div id="map-canvas" style="height:250px;width:auto;margin: 15px 0 15px 0;"></div>
-            </div>
-          </form>
-        </div>
-      </div>
-
-      
-    </div>
+    
 
     <!-- Modal subscribe form -->
     <div id="subscribe-modal" class="modal fade">
@@ -140,31 +209,11 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
-    <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    
     <script>
-      $(document).ready(function(){
-        // Flag behaviour on click simulation
-        $('.lang-flag').on('click', function(e){
-          e.preventDefault();
-          $('.lang-flag').removeClass('lang-selected');
-          $(this).addClass('lang-selected');
-        });
-
-        var map;
-
-        function initialize() {
-          var mapOptions = {
-            zoom: 8,
-            center: new google.maps.LatLng(38.0550714, -0.9389042),
-          };
-          
-          map = new google.maps.Map(document.getElementById('map-canvas'),
-              mapOptions);
-        }
-
-        google.maps.event.addDomListener(window, 'load', initialize);
-      });
+      
     
     </script>
 </body>
 </html>
+<?php echo $__env->make('layouts/master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

@@ -1,0 +1,29 @@
+<?php $__env->startSection('pageTitle'); ?>
+	<title>Calavera Beats - Home</title>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('navbarElements'); ?>
+	<li class="active"><a disabled>Home</a></li>
+	<li ><a href="<?php echo URL::to('/beats');; ?>">Beats</a></li>
+	<li> <a href="<?php echo URL::to('/contact');; ?>">Contacto</a> </li>
+	<li class="dropdown">
+	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+	  <li><a href="#">Action</a></li>
+	  <li><a href="#">Another action</a></li>
+	  <li><a href="#">Something else here</a></li>
+	  <li class="divider"></li>
+	  <li class="dropdown-header">Nav header</li>
+	  <li><a href="#">Separated link</a></li>
+	  <li><a href="#">One more separated link</a></li>
+	</ul>
+	</li>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('content'); ?>
+	<div class="container">
+		<!-- Mete dentro de este DIV todo lo que quieras -->
+		<h1>HOME PAGE</h1>
+	</div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
